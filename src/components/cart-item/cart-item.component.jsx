@@ -1,16 +1,16 @@
-import { CartItemContainer, ItemContainer, Name } from './cart-item.styles.jsx';
+import { CartItemContainer, ItemDetails } from './cart-item.styles';
 
 const CartItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   return (
     <CartItemContainer>
       <img src={imageUrl} alt={`${name}`} />
-      <ItemContainer>
-        <Name>{name}</Name>
+      <ItemDetails>
+        <span>{name}</span>
         <span>
           {quantity} x ${price}
         </span>
-      </ItemContainer>
+      </ItemDetails>
     </CartItemContainer>
   );
 };
